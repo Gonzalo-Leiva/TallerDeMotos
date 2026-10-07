@@ -1,7 +1,7 @@
-import assert from "node:assert/strict";
-import test from "node:test";
+const assert = require("node:assert/strict");
+const test = require("node:test");
 
-import { formatGreeting } from "../src/greeting.js";
+const { formatGreeting } = require("../src/domain/services/greetingService.js");
 
 test("formatGreeting devuelve un saludo claro", () => {
   assert.equal(formatGreeting(), "¡Hola desde Node.js!");

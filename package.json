@@ -2,14 +2,22 @@
   "name": "proyecto-taller-motos",
   "version": "1.0.0",
   "description": "Configuración básica de una aplicación Node.js",
-  "type": "module",
-  "main": "src/index.js",
+  "main": "src/infrastructure/index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "test": "node --test"
+    "start": "tsx src/infrastructure/index.js",
+    "dev": "tsx watch src/infrastructure/index.js",
+    "test": "node --import tsx --test"
   },
   "engines": {
     "node": ">=20"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.2.1",
+    "uuid": "^14.0.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
+  }
 }
